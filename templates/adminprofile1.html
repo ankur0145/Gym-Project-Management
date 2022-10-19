@@ -1,0 +1,23 @@
+{% extends "A2.html" %}
+{% block m2 %}
+
+
+<h1>UPDATE</h1>
+{% if kota %}
+<form method="post" action="adminprofile2">
+    <p>name <input type="text" name="t1" value={{kota[0]}}></p>
+    <p>address <input type="text" name="t2" value={{kota[1]}}></p>
+    <p>contact <input type="text" name="t3" value={{kota[2]}}></p>
+    <p>email <input readonly type="text" name="t4" value={{kota[3]}}></p>
+    <p><input type="submit" name="b1" value="update"/></p>
+</form>
+
+<h3>
+    <a href="adminprofile">back</a>
+</h3>
+
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}

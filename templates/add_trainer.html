@@ -1,0 +1,23 @@
+{% extends "A3.html" %}
+{% block m3 %}
+
+
+
+<h1>ADD TRAINER</h1>
+<form method="post" action="add_trainer">
+
+    <p>trainer_name<input type="text" name="t1"/></p>
+    <p>address<input type="text" name="t2"/></p>
+    <p>contact<input type="text" name="t3"/></p>
+    <p>fees<input type="text" name="t4"/></p>
+
+
+    <p><input type="submit" name="b1" value="insert"/></p>
+
+</form>
+
+{% if result %}
+    <h3>{{ result }}</h3>
+{% endif %}
+
+{% endblock %}

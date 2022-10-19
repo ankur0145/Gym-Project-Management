@@ -1,0 +1,24 @@
+{% extends "A3.html" %}
+{% block m3 %}
+
+
+<h1>GYM PROFILE</h1>
+{% if kota %}
+    {{kota}}
+<p>
+
+    name:{{kota[0]}}<br/>
+    owner_name:{{kota[1]}}<br/>
+    address:{{kota[2]}}<br/>
+    contact:{{kota[3]}}<br/>
+    email:{{kota[4]}}<br/>
+</p>
+<form method="post" action="gymprofile">
+    <input type="submit" name="b1" value="edit">
+</form>
+
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}

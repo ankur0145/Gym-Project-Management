@@ -1,0 +1,69 @@
+<html>
+<head>
+     <link href="../static/css/bootstrap.css"
+     rel="stylesheet"
+     type="text/css"/>
+<script src="../static/scripts/jquery.min.js"></script>
+<script>
+      $(document).ready(function(e) {
+            $("#b1").click(function(){
+				$("#item").slideToggle();
+			});
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="container-fluid bg-primary">
+	<h1 class="bg-primary text-light text-center">FOR FITNESS GYM</h1>
+</div>
+
+<div class="container-fluid bg-dark" style="...">
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark" style="h">
+		<a href="GUEST" class="navbar-brand">FITNESS GYM</a>
+
+        <button class="navbar-toggler">
+            <span class="navbar-toggler-icon" id="b1"></span>
+        </button>
+		<div class="collapse navbar-collapse" id="item">
+
+            <ul class="navbar-nav text-center ml-5 mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="login">login</a></li>
+            </ul>
+                </li>
+        </div>
+    </nav>
+</div>
+
+<div class="container-fluid" style="min-height:500px; background-image:url(../static/images/gympic.jpg); background-size:100%; ">
+
+{% block m1 %}
+
+{% endblock %}
+
+
+
+
+
+</div>
+
+<div class="container-fluid bg-info"  style="...">
+	<p class="text-center">
+    	<a href="#">Support</a>
+        <a href="#">Terms</a>
+        <a href="#">Our Network</a>
+    </p>
+    <p class="text-center">
+        <a href="#"><img src="../static/images/facebooklogo.jpg" width="40" height="40"/></a>
+    </p>    
+	<p class="text-center">
+    	<a href="#"><img src="../static/images/logo.png" width="40" height="40" /></a>
+    </p>
+    
+	<p class="text-center">Copyright &copy; 2022, All rights reserved Bhaman Infotech.</p>
+</div>
+
+</body>
+</html>

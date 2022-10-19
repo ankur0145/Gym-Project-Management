@@ -1,0 +1,16 @@
+{% extends "A1.html" %}
+{% block m1 %}
+
+
+<h1 style="color:#fff">LOGIN</h1>
+<form method="post" action="login">
+    <p style="color:#fff;"> email<input type="text" name="t1"/></p>
+    <p style="color:#fff;">password<input type="text" name="t2"/></p>
+    <p><input type="submit" name="b1" value="LOGIN"/></p>
+</form>
+
+{% if msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}

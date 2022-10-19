@@ -1,0 +1,144 @@
+<html>
+<head>
+     <link href="../static/css/bootstrap.css"
+     rel="stylesheet"
+     type="text/css"/>
+<script src="../static/scripts/jquery.min.js"></script>
+<script>
+      $(document).ready(function(e) {
+            $("#b1").click(function(){
+				$("#item").slideToggle();
+			});
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="container-fluid bg-primary">
+	<h1 class="bg-primary text-light text-center">GYM</h1>
+</div>
+
+<div class="container-fluid bg-dark" style="...">
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark" style="h">
+		<a href="#" class="navbar-brand">FITNESS GYM</a>
+
+        <button class="navbar-toggler">
+            <span class="navbar-toggler-icon" id="b1"></span>
+        </button>
+		<div class="collapse navbar-collapse" id="item">
+
+            <ul class="navbar-nav text-center ml-5 mr-auto">
+                <li class="nav-item"><a class="nav-link" href="gym_home">Home</a></li>
+        <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" id="a1">trainer</a>
+
+       		<ul class="dropdown-menu text-center" id="p1">
+                   <li><a href="add_trainer" class="dropdown-header">Add</a></li>
+                   <li><a href="show_trainer" class="dropdown-item">Manage</a></li>
+            </ul>
+       	</li>
+                 <li class="nav-item dropdown">
+     <a href="#" class="nav-link dropdown-toggle" id="a3">profile</a>
+
+     	<ul class="dropdown-menu text-center" id="p3">
+              <li><a href="gymprofile" class="dropdown-header">profile</a></li>
+              <li><a href="gym_change_password" class="dropdown-item">changepassword</a></li>
+        </ul>
+       </li>
+                <li class="nav-item"><a class="nav-link" href="login">logout</a></li>
+            </ul>
+        </div>
+
+
+    </nav>
+</div>
+
+<div class="container-fluid" style="min-height:600px;background-image:url(../static/images/gymlogo.jpg); background-size:100%; ">
+
+
+{% block m3 %}
+
+{% endblock %}
+
+</div>
+<div class="container-fluid bg-info"  style="...">
+	<p class="text-center">
+    	<a href="#">Support</a>
+        
+        <a href="#">Terms</a>
+        
+        <a href="#">Our Network</a>
+    </p>
+    <p class="text-center">
+    	<a href="#"><img src="../static/images/facebooklogo.jpg" width="40" height="40" /></a>
+    </p>
+	<p class="text-center">
+    	<a href="#"><img src="../static/images/logo.png" width="40" height="40" /></a>
+    </p>
+	<p class="text-center">Copyright &copy; 2022, All rights reserved Bhaman Infotech.</p>
+</div>
+
+</div>
+</div>
+
+</div>
+<script>
+	$(document).ready(function(e) {
+
+		var a=0;
+		var b=0;
+		var c=0;
+
+        $("#a1").click(function(e) {
+            if(a==0)
+            {
+                $("#p1").slideDown(); a=1;
+                if(b==1){$("#p2").slideUp(); b=0;}
+		if(c==1){$("#p3").slideUp(); c=0;}
+	}
+	else
+	{
+            $("#p1").slideUp(); a=0;
+	}
+        });
+
+            $("#a2").click(function(e) {
+		if(b==0)
+            {
+		$("#p2").slideDown(); 	b=1;
+		if(a==1){$("#p1").slideUp(); a=0;}
+		if(c==1){$("#p3").slideUp(); c=0;}
+            }
+	else
+            {
+                $("#p2").slideUp(); b=0;
+            }
+        });
+
+		$("#a3").click(function(e) {
+		if(c==0)
+                {
+                    $("#p3").slideDown(); 	c=1;
+                    if(a==1){$("#p1").slideUp(); a=0;}
+                    if(b==1){$("#p2").slideUp(); b=0;}
+		}
+		else
+		{
+                    $("#p3").slideUp(); c=0;
+		}
+        });
+
+
+	$("#b1").click(function(e) {
+            $("item").slideToggle();
+        });
+    });
+
+</script>
+
+
+
+</body>
+</html>
+

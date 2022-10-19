@@ -1,0 +1,25 @@
+{% extends "A3.html" %}
+{% block m3 %}
+
+
+<h1>EDIT TRAINER</h1>
+
+{% if kota %}
+<form method="POST" action="edittrainer1">
+    <input type="hidden" name="t1" value="{{kota[0]}}" />
+    <p>trainer_name<input type="text" name="t2" value="{{kota[1]}}"/></p>
+    <p>address<input type="text" name="t3" value="{{kota[2]}}"/></p>
+    <p>contact<input type="text" name="t4" value="{{kota[3]}}"/></p>
+    <p>fees<input type="text" name="t5" value="{{kota[4]}}"/></p>
+    <p>email<input type="text" name="t7" value="{{kota[6]}}"/></p>
+    <p><input type="submit" name="b2" value="update" /></p>
+</form>
+
+<h3>
+    <a href="show_trainer">back</a>
+</h3>
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}

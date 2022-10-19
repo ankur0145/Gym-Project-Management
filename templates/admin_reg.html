@@ -1,0 +1,19 @@
+{% extends "A2.html" %}
+{% block m2 %}
+
+
+<h1>admin registration</h1>
+<form method="post" action="admin_reg">
+    <p>name<input type="text" name="t1"/></p>
+    <p>address<input type="text" name="t2"/></p>
+    <p>contact<input type="text" name="t3"/> </p>
+    <p>email <input type="text" name="t4"/></p>
+    <p>password <input type="text" name="t5"/> </p>
+    <p>confirm password <input type="text" name="t6"/> </p>
+    <p><input type="submit" name="b1" value="INSERT"/> </p>
+</form>
+{% if result %}
+<h3>{{ result }}</h3>
+{% endif %}
+
+{% endblock %}

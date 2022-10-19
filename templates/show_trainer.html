@@ -1,0 +1,25 @@
+{% extends "A3.html" %}
+{% block m3 %}
+
+
+<h1>SHOW TRAINER</h1>
+{% if kota %}
+    {{kota}}
+<p>
+
+    trainer_name:{{kota[0]}}<br/>
+    address:{{kota[1]}}<br/>
+    contact:{{kota[2]}}<br/>
+    email:{{kota[3]}}<br/>
+    fees:{{kota[4]}}<br/>
+
+</p>
+<form method="post" action="edittrainer">
+    <input type="submit" name="b1" value="edit" />
+</form>
+
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}
